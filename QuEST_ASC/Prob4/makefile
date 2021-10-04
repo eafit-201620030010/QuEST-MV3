@@ -32,13 +32,13 @@ QUEST_DIR = ../QuEST/QuEST
 
 # compiler to use, which should support both C and C++, to be wrapped by GPU/MPI compilers
 # Note: change the python CPLUS_INCLUDE_PATH and LD_LIBRARY_PATH here
-COMPILER =  #-I/usr/include/python3.8 -L/usr/lib/x86_64-linux-gnu 
+COMPILER = icpx #-I/usr/include/python3.8 -L/usr/lib/x86_64-linux-gnu 
 
 # type of above compiler, one of {GNU, INTEL, CLANG}, used for setting compiler flags
-COMPILER_TYPE = 
+COMPILER_TYPE =INTEL
 
 # hardwares to target: 1 means use, 0 means don't use
-MULTITHREADED = 0
+MULTITHREADED = 1
 DISTRIBUTED = 0
 GPUACCELERATED = 0
 
@@ -173,7 +173,7 @@ QUEST_INCLUDE = -I${QUEST_INCLUDE_DIR} -I$(QUEST_INNER_DIR) -I$(QUEST_COMMON_DIR
 #
 
 CUDA_COMPILER = 
-MPI_COMPILER = 
+MPI_COMPILER =
 
 
 
@@ -196,7 +196,7 @@ ifeq ($(MULTITHREADED), 1)
     ifeq ($(COMPILER_TYPE), GNU)
         THREAD_FLAGS = -fopenmp
     else ifeq ($(COMPILER_TYPE), INTEL)
-        THREAD_FLAGS = -qopenmp
+        THREAD_FLAGS = -fiopenmp
     endif
 else
     THREAD_FLAGS =
@@ -205,12 +205,12 @@ endif
 # c
 C_CLANG_FLAGS = -O2 -std=c99 -mavx -Wall -DQuEST_PREC=$(PRECISION)
 C_GNU_FLAGS = -O2 -std=c99 -mavx -Wall -DQuEST_PREC=$(PRECISION) $(THREAD_FLAGS)
-C_INTEL_FLAGS = -O2 -std=c99 -fprotect-parens -Wall -xAVX -axCORE-AVX2 -diag-disable -cpu-dispatch -DQuEST_PREC=$(PRECISION) $(THREAD_FLAGS)
+C_INTEL_FLAGS = -march=sandybridge -Ofast -fp-model fast -std=c99 -fprotect-parens -Wall -diag-disable -cpu-dispatch -DQuEST_PREC=$(PRECISION) $(THREAD_FLAGS)
 
 # c++
 CPP_CLANG_FLAGS = -O2 -std=c++11 -mavx -Wall -DQuEST_PREC=$(PRECISION)
 CPP_GNU_FLAGS = -O2 -std=c++11 -mavx -Wall -DQuEST_PREC=$(PRECISION) $(THREAD_FLAGS)
-CPP_INTEL_FLAGS = -O2 -std=c++11 -fprotect-parens -Wall -xAVX -axCORE-AVX2 -diag-disable -cpu-dispatch -DQuEST_PREC=$(PRECISION) $(THREAD_FLAGS)
+CPP_INTEL_FLAGS = -march=sandybridge -Ofast -fp-model fast -std=c++11 -fprotect-parens -Wall -diag-disable -cpu-dispatch -DQuEST_PREC=$(PRECISION) $(THREAD_FLAGS)
 
 # wrappers
 CPP_CUDA_FLAGS = -O2 -arch=compute_$(GPU_COMPUTE_CAPABILITY) -code=sm_$(GPU_COMPUTE_CAPABILITY) -DQuEST_PREC=$(PRECISION) -ccbin $(COMPILER)

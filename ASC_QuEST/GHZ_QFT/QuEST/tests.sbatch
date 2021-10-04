@@ -1,0 +1,18 @@
+#!/bin/bash                                                                     
+#SBATCH --nodes=1                                                               
+#SBATCH --ntasks-per-node=1
+#SBATCH --cpus-per-task=16 
+#SBATCH --time=00:20:00                                                          
+#SBATCH --job-name=test_quest                                                     
+#SBATCH -o %x_%j.out
+#SBATCH -e %x_%j.err
+
+source /share/apps/intel/oneapi/setvars.sh --force
+
+rm build
+mkdir build
+cd build
+cmake .. -DDISTRIBUTED=0 -DMULTITHREADED=1
+make
+
+./demo

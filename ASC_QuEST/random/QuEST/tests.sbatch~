@@ -1,0 +1,33 @@
+#!/bin/bash                                                                     
+#SBATCH --nodes=2                                                               
+#SBATCH --ntasks-per-node=1
+#SBATCH --cpus-per-task=16 
+#SBATCH --time=01:00:00                                                          
+#SBATCH --job-name=test_quest                                                     
+#SBATCH -o %x_%j.out
+#SBATCH -e %x_%j.err
+
+source /share/apps/intel/oneapi/setvars.sh --force
+
+export OMP_NUM_THREADS=16  # num of threads per process
+export I_MPI_CC=icx
+export I_MPI_PMI_LIBRARY=/opt/slurm/20.11.5/lib/libpmi2.so
+export SLURM_CPU_BIND="quiet,boards"
+export SLURM_PMI_KVS_NO_DUP_KEYS=1
+export SLURM_MPI_TYPE=pmi2
+export CC=icx
+export CXX=icpx
+export FC=ifort
+export F90=ifort
+export F77=ifort
+export MPIF90=mpiifort
+export LD=ld
+export AR=ar
+
+rm -rf build
+mkdir build
+cd build
+cmake .. -DDISTRIBUTED=1 -DMULTITHREADED=1
+make
+
+mpirun -env UCX_NET_DEVICES=mlx4_0:1 ./demo

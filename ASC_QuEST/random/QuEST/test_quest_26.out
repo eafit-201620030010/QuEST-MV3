@@ -1,0 +1,50 @@
+-- CMake version: 3.18.2
+-- CMake build type: 
+-- The C compiler identification is Clang 13.0.0
+-- The CXX compiler identification is Clang 13.0.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /share/apps/intel/compiler/2021.3.0/linux/bin/icx - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /share/apps/intel/compiler/2021.3.0/linux/bin/icpx - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Precision is 2
+-- GPU acceleration is OFF
+-- OMP acceleration is 1
+-- MPI distribution is 1
+-- Found MPI_C: /share/apps/intel/mpi/2021.3.0/lib/libmpifort.so (found version "3.1") 
+-- Found MPI_CXX: /share/apps/intel/mpi/2021.3.0/lib/libmpifort.so (found version "3.1") 
+-- Found MPI: TRUE (found version "3.1")  
+-- Found OpenMP_C: -fopenmp=libiomp5 (found version "5.0") 
+-- Found OpenMP_CXX: -fopenmp=libiomp5 (found version "5.0") 
+-- Found OpenMP: TRUE (found version "5.0")  
+-- Compiling examples/tutorial_example.c to executable demo
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /share/apps/QuEST-MV3/ASC_QuEST/random/QuEST/build
+Scanning dependencies of target QuEST
+[ 10%] Building C object QuEST/CMakeFiles/QuEST.dir/src/QuEST.c.o
+[ 20%] Building C object QuEST/CMakeFiles/QuEST.dir/src/QuEST_common.c.o
+[ 30%] Building C object QuEST/CMakeFiles/QuEST.dir/src/QuEST_qasm.c.o
+[ 40%] Building C object QuEST/CMakeFiles/QuEST.dir/src/QuEST_validation.c.o
+[ 50%] Building C object QuEST/CMakeFiles/QuEST.dir/src/mt19937ar.c.o
+[ 60%] Building C object QuEST/CMakeFiles/QuEST.dir/src/CPU/QuEST_cpu.c.o
+[ 70%] Building C object QuEST/CMakeFiles/QuEST.dir/src/CPU/QuEST_cpu_distributed.c.o
+[ 80%] Linking C shared library libQuEST.so
+[ 80%] Built target QuEST
+Scanning dependencies of target demo
+[ 90%] Building C object CMakeFiles/demo.dir/examples/tutorial_example.c.o
+[100%] Linking C executable demo
+[100%] Built target demo
+MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra process manager was found
+MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra process manager was found
+
+
+
+
+Complete the simulation takes time   320.083638 seconds.
+Complete the simulation takes time   320.081181 seconds.
