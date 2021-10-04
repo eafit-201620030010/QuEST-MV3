@@ -1,0 +1,8 @@
+MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra process manager was found
+MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra process manager was found
+
+
+
+
+Complete the simulation takes time   188.443393 seconds.
+Complete the simulation takes time   188.443398 seconds.

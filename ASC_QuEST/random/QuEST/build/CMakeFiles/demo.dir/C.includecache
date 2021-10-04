@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../QuEST/include/QuEST.h
+QuEST_precision.h
+../QuEST/include/QuEST_precision.h
+
+../QuEST/include/QuEST_precision.h
+math.h
+-
+
+/share/apps/QuEST-MV3/ASC_QuEST/random/QuEST/examples/mytimer.hpp
+time.h
+-
+sys/time.h
+-
+
+/share/apps/QuEST-MV3/ASC_QuEST/random/QuEST/examples/tutorial_example.c
+QuEST.h
+/share/apps/QuEST-MV3/ASC_QuEST/random/QuEST/examples/QuEST.h
+stdio.h
+/share/apps/QuEST-MV3/ASC_QuEST/random/QuEST/examples/stdio.h
+mytimer.hpp
+/share/apps/QuEST-MV3/ASC_QuEST/random/QuEST/examples/mytimer.hpp
+

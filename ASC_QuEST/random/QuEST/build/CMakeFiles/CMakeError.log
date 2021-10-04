@@ -1,0 +1,138 @@
+Detecting C OpenMP failed with the following output:
+Change Dir: /share/apps/QuEST-MV3/ASC_QuEST/random/QuEST/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_256fd/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_256fd.dir/build.make CMakeFiles/cmTC_256fd.dir/build
+gmake[1]: Entering directory '/share/apps/QuEST-MV3/ASC_QuEST/random/QuEST/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_256fd.dir/OpenMPTryFlag.c.o
+/share/apps/intel/compiler/2021.3.0/linux/bin/icx   -fopenmp=libomp -v -o CMakeFiles/cmTC_256fd.dir/OpenMPTryFlag.c.o -c /share/apps/QuEST-MV3/ASC_QuEST/random/QuEST/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.c
+Intel(R) oneAPI DPC++/C++ Compiler 2021.3.0 (2021.3.0.20210619)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /share/apps/intel/compiler/2021.3.0/linux/bin
+Found candidate GCC installation: /usr/lib/gcc/i686-redhat-linux/8
+Found candidate GCC installation: /usr/lib/gcc/x86_64-redhat-linux/8
+Selected GCC installation: /usr/lib/gcc/x86_64-redhat-linux/8
+Candidate multilib: .;@m64
+Candidate multilib: 32;@m32
+Selected multilib: .;@m64
+ (in-process)
+ "/share/apps/intel/compiler/2021.3.0/linux/bin/clang" -cc1 -triple x86_64-unknown-linux-gnu -emit-obj --mrelax-relocations -disable-free -disable-llvm-verifier -discard-value-names -main-file-name OpenMPTryFlag.c -mrelocation-model static -fveclib=SVML -mframe-pointer=none -menable-no-infs -menable-no-nans -menable-unsafe-fp-math -fno-signed-zeros -mreassociate -freciprocal-math -fdenormal-fp-math=preserve-sign,preserve-sign -ffp-contract=fast -fno-rounding-math -ffast-math -ffinite-math-only -mconstructor-aliases -munwind-tables -target-cpu x86-64 -mllvm -x86-enable-unaligned-vector-move=true -tune-cpu generic -debugger-tuning=gdb -v -fcoverage-compilation-dir=/share/apps/QuEST-MV3/ASC_QuEST/random/QuEST/build/CMakeFiles/CMakeTmp -resource-dir /share/apps/intel/compiler/2021.3.0/linux/lib/clang/13.0.0 -I/share/apps/intel/vpl/2021.4.0/include -I/share/apps/intel/tbb/2021.3.0/env/../include -I/share/apps/intel/mpi/2021.3.0//include -I/share/apps/intel/mkl/2021.3.0/include -I/share/apps/intel/ippcp/2021.3.0/include -I/share/apps/intel/ipp/2021.3.0/include -I/share/apps/intel/dpl/2021.4.0/linux/include -I/share/apps/intel/dpcpp-ct/2021.3.0/include -I/share/apps/intel/dnnl/2021.3.0/cpu_dpcpp_gpu_dpcpp/lib -I/share/apps/intel/dev-utilities/2021.3.0/include -I/share/apps/intel/dal/2021.3.0/include -I/share/apps/intel/compiler/2021.3.0/linux/include -I/share/apps/intel/ccl/2021.3.0/include/cpu_gpu_dpcpp -c-isystem /opt/munge/include -c-isystem /opt/slurm/20.11.5/include/slurm -c-isystem /opt/slurm/20.11.5/include -cxx-isystem /share/apps/intel/clck/2021.3.0/include -cxx-isystem /opt/munge/include -cxx-isystem /opt/slurm/20.11.5/include/slurm -cxx-isystem /opt/slurm/20.11.5/include -internal-isystem /share/apps/intel/compiler/2021.3.0/linux/bin/../compiler/include -internal-isystem /share/apps/intel/compiler/2021.3.0/linux/lib/clang/13.0.0/include -internal-isystem /usr/local/include -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/8/../../../../x86_64-redhat-linux/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -O2 -fdebug-compilation-dir=/share/apps/QuEST-MV3/ASC_QuEST/random/QuEST/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fheinous-gnu-extensions -fopenmp -fopenmp-cuda-parallel-target-regions -fgnuc-version=4.2.1 -vectorize-loops -vectorize-slp -D__GCC_HAVE_DWARF2_CFI_ASM=1 -fintel-compatibility -mllvm -disable-hir-generate-mkl-call -mllvm -intel-libirc-allowed -mllvm -loopopt=0 -mllvm -enable-lv -o CMakeFiles/cmTC_256fd.dir/OpenMPTryFlag.c.o -x c /share/apps/QuEST-MV3/ASC_QuEST/random/QuEST/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.c
+clang -cc1 version 13.0.0 based upon LLVM 13.0.0git default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/usr/lib/gcc/x86_64-redhat-linux/8/../../../../x86_64-redhat-linux/include"
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /share/apps/intel/vpl/2021.4.0/include
+ /share/apps/intel/tbb/2021.3.0/env/../include
+ /share/apps/intel/mpi/2021.3.0//include
+ /share/apps/intel/mkl/2021.3.0/include
+ /share/apps/intel/ippcp/2021.3.0/include
+ /share/apps/intel/ipp/2021.3.0/include
+ /share/apps/intel/dpl/2021.4.0/linux/include
+ /share/apps/intel/dpcpp-ct/2021.3.0/include
+ /share/apps/intel/dnnl/2021.3.0/cpu_dpcpp_gpu_dpcpp/lib
+ /share/apps/intel/dev-utilities/2021.3.0/include
+ /share/apps/intel/dal/2021.3.0/include
+ /share/apps/intel/compiler/2021.3.0/linux/include
+ /share/apps/intel/ccl/2021.3.0/include/cpu_gpu_dpcpp
+ /opt/munge/include
+ /opt/slurm/20.11.5/include/slurm
+ /opt/slurm/20.11.5/include
+ /share/apps/intel/compiler/2021.3.0/linux/bin/../compiler/include
+ /share/apps/intel/compiler/2021.3.0/linux/lib/clang/13.0.0/include
+ /usr/local/include
+ /usr/include
+End of search list.
+Linking C executable cmTC_256fd
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_256fd.dir/link.txt --verbose=1
+/share/apps/intel/compiler/2021.3.0/linux/bin/icx  -fopenmp=libomp -v -rdynamic CMakeFiles/cmTC_256fd.dir/OpenMPTryFlag.c.o -o cmTC_256fd  -v 
+Intel(R) oneAPI DPC++/C++ Compiler 2021.3.0 (2021.3.0.20210619)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /share/apps/intel/compiler/2021.3.0/linux/bin
+Found candidate GCC installation: /usr/lib/gcc/i686-redhat-linux/8
+Found candidate GCC installation: /usr/lib/gcc/x86_64-redhat-linux/8
+Selected GCC installation: /usr/lib/gcc/x86_64-redhat-linux/8
+Candidate multilib: .;@m64
+Candidate multilib: 32;@m32
+Selected multilib: .;@m64
+ "/usr/bin/ld" -export-dynamic --eh-frame-hdr -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_256fd /usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/8/crtbegin.o -L/share/apps/intel/compiler/2021.3.0/linux/bin/../compiler/lib/intel64_lin -L/share/apps/intel/compiler/2021.3.0/linux/bin/../lib -L/share/apps/intel/compiler/2021.3.0/linux/bin/../compiler/lib/intel64_lin -L/usr/lib/gcc/x86_64-redhat-linux/8 -L/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/8/../../.. -L/share/apps/intel/compiler/2021.3.0/linux/bin/../lib -L/lib -L/usr/lib -L/share/apps/intel/vpl/2021.4.0/lib -L/share/apps/intel/tbb/2021.3.0/env/../lib/intel64/gcc4.8 -L/share/apps/intel/mpi/2021.3.0//libfabric/lib -L/share/apps/intel/mpi/2021.3.0//lib/release -L/share/apps/intel/mpi/2021.3.0//lib -L/share/apps/intel/mkl/2021.3.0/lib/intel64 -L/share/apps/intel/ippcp/2021.3.0/lib/intel64 -L/share/apps/intel/ipp/2021.3.0/lib/intel64 -L/share/apps/intel/dnnl/2021.3.0/cpu_dpcpp_gpu_dpcpp/lib -L/share/apps/intel/dal/2021.3.0/lib/intel64 -L/share/apps/intel/compiler/2021.3.0/linux/compiler/lib/intel64_lin -L/share/apps/intel/compiler/2021.3.0/linux/lib -L/share/apps/intel/clck/2021.3.0/lib/intel64 -L/share/apps/intel/ccl/2021.3.0/lib/cpu_gpu_dpcpp -L/opt/munge/lib -L/opt/slurm/20.11.5/lib64 -L/opt/slurm/20.11.5/lib CMakeFiles/cmTC_256fd.dir/OpenMPTryFlag.c.o -Bstatic -lsvml -Bdynamic -Bstatic -lirng -Bdynamic -limf -lm -lgcc --as-needed -lgcc_s --no-as-needed -Bstatic -lirc -Bdynamic -ldl -lomp -lgcc --as-needed -lgcc_s --no-as-needed -lpthread -lc -lgcc --as-needed -lgcc_s --no-as-needed -Bstatic -lirc_s -Bdynamic /usr/lib/gcc/x86_64-redhat-linux/8/crtend.o /usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crtn.o
+/usr/bin/ld: cannot find -lomp
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+gmake[1]: *** [CMakeFiles/cmTC_256fd.dir/build.make:106: cmTC_256fd] Error 1
+gmake[1]: Leaving directory '/share/apps/QuEST-MV3/ASC_QuEST/random/QuEST/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_256fd/fast] Error 2
+
+
+
+Detecting CXX OpenMP failed with the following output:
+Change Dir: /share/apps/QuEST-MV3/ASC_QuEST/random/QuEST/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_162ab/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_162ab.dir/build.make CMakeFiles/cmTC_162ab.dir/build
+gmake[1]: Entering directory '/share/apps/QuEST-MV3/ASC_QuEST/random/QuEST/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_162ab.dir/OpenMPTryFlag.cpp.o
+/share/apps/intel/compiler/2021.3.0/linux/bin/icpx   -fopenmp=libomp -v -o CMakeFiles/cmTC_162ab.dir/OpenMPTryFlag.cpp.o -c /share/apps/QuEST-MV3/ASC_QuEST/random/QuEST/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp
+Intel(R) oneAPI DPC++/C++ Compiler 2021.3.0 (2021.3.0.20210619)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /share/apps/intel/compiler/2021.3.0/linux/bin
+Found candidate GCC installation: /usr/lib/gcc/i686-redhat-linux/8
+Found candidate GCC installation: /usr/lib/gcc/x86_64-redhat-linux/8
+Selected GCC installation: /usr/lib/gcc/x86_64-redhat-linux/8
+Candidate multilib: .;@m64
+Candidate multilib: 32;@m32
+Selected multilib: .;@m64
+ (in-process)
+ "/share/apps/intel/compiler/2021.3.0/linux/bin/clang++" -cc1 -triple x86_64-unknown-linux-gnu -emit-obj --mrelax-relocations -disable-free -disable-llvm-verifier -discard-value-names -main-file-name OpenMPTryFlag.cpp -mrelocation-model static -fveclib=SVML -mframe-pointer=none -menable-no-infs -menable-no-nans -menable-unsafe-fp-math -fno-signed-zeros -mreassociate -freciprocal-math -fdenormal-fp-math=preserve-sign,preserve-sign -ffp-contract=fast -fno-rounding-math -ffast-math -ffinite-math-only -mconstructor-aliases -munwind-tables -target-cpu x86-64 -mllvm -x86-enable-unaligned-vector-move=true -tune-cpu generic -debugger-tuning=gdb -v -fcoverage-compilation-dir=/share/apps/QuEST-MV3/ASC_QuEST/random/QuEST/build/CMakeFiles/CMakeTmp -resource-dir /share/apps/intel/compiler/2021.3.0/linux/lib/clang/13.0.0 -I/share/apps/intel/vpl/2021.4.0/include -I/share/apps/intel/tbb/2021.3.0/env/../include -I/share/apps/intel/mpi/2021.3.0//include -I/share/apps/intel/mkl/2021.3.0/include -I/share/apps/intel/ippcp/2021.3.0/include -I/share/apps/intel/ipp/2021.3.0/include -I/share/apps/intel/dpl/2021.4.0/linux/include -I/share/apps/intel/dpcpp-ct/2021.3.0/include -I/share/apps/intel/dnnl/2021.3.0/cpu_dpcpp_gpu_dpcpp/lib -I/share/apps/intel/dev-utilities/2021.3.0/include -I/share/apps/intel/dal/2021.3.0/include -I/share/apps/intel/compiler/2021.3.0/linux/include -I/share/apps/intel/ccl/2021.3.0/include/cpu_gpu_dpcpp -c-isystem /opt/munge/include -c-isystem /opt/slurm/20.11.5/include/slurm -c-isystem /opt/slurm/20.11.5/include -cxx-isystem /share/apps/intel/clck/2021.3.0/include -cxx-isystem /opt/munge/include -cxx-isystem /opt/slurm/20.11.5/include/slurm -cxx-isystem /opt/slurm/20.11.5/include -internal-isystem /share/apps/intel/compiler/2021.3.0/linux/bin/../compiler/include -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/8/../../../../include/c++/8 -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/8/../../../../include/c++/8/x86_64-redhat-linux -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/8/../../../../include/c++/8/backward -internal-isystem /share/apps/intel/compiler/2021.3.0/linux/lib/clang/13.0.0/include -internal-isystem /usr/local/include -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/8/../../../../x86_64-redhat-linux/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -O2 -fdeprecated-macro -fdebug-compilation-dir=/share/apps/QuEST-MV3/ASC_QuEST/random/QuEST/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fheinous-gnu-extensions -fopenmp -fopenmp-cuda-parallel-target-regions -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -vectorize-loops -vectorize-slp -D__GCC_HAVE_DWARF2_CFI_ASM=1 -fintel-compatibility -mllvm -disable-hir-generate-mkl-call -mllvm -intel-libirc-allowed -mllvm -loopopt=0 -mllvm -enable-lv -o CMakeFiles/cmTC_162ab.dir/OpenMPTryFlag.cpp.o -x c++ /share/apps/QuEST-MV3/ASC_QuEST/random/QuEST/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp
+clang -cc1 version 13.0.0 based upon LLVM 13.0.0git default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/usr/lib/gcc/x86_64-redhat-linux/8/../../../../x86_64-redhat-linux/include"
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /share/apps/intel/vpl/2021.4.0/include
+ /share/apps/intel/tbb/2021.3.0/env/../include
+ /share/apps/intel/mpi/2021.3.0//include
+ /share/apps/intel/mkl/2021.3.0/include
+ /share/apps/intel/ippcp/2021.3.0/include
+ /share/apps/intel/ipp/2021.3.0/include
+ /share/apps/intel/dpl/2021.4.0/linux/include
+ /share/apps/intel/dpcpp-ct/2021.3.0/include
+ /share/apps/intel/dnnl/2021.3.0/cpu_dpcpp_gpu_dpcpp/lib
+ /share/apps/intel/dev-utilities/2021.3.0/include
+ /share/apps/intel/dal/2021.3.0/include
+ /share/apps/intel/compiler/2021.3.0/linux/include
+ /share/apps/intel/ccl/2021.3.0/include/cpu_gpu_dpcpp
+ /share/apps/intel/clck/2021.3.0/include
+ /opt/munge/include
+ /opt/slurm/20.11.5/include/slurm
+ /opt/slurm/20.11.5/include
+ /share/apps/intel/compiler/2021.3.0/linux/bin/../compiler/include
+ /usr/lib/gcc/x86_64-redhat-linux/8/../../../../include/c++/8
+ /usr/lib/gcc/x86_64-redhat-linux/8/../../../../include/c++/8/x86_64-redhat-linux
+ /usr/lib/gcc/x86_64-redhat-linux/8/../../../../include/c++/8/backward
+ /share/apps/intel/compiler/2021.3.0/linux/lib/clang/13.0.0/include
+ /usr/local/include
+ /usr/include
+End of search list.
+Linking CXX executable cmTC_162ab
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_162ab.dir/link.txt --verbose=1
+/share/apps/intel/compiler/2021.3.0/linux/bin/icpx  -fopenmp=libomp -v -rdynamic CMakeFiles/cmTC_162ab.dir/OpenMPTryFlag.cpp.o -o cmTC_162ab  -v 
+Intel(R) oneAPI DPC++/C++ Compiler 2021.3.0 (2021.3.0.20210619)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /share/apps/intel/compiler/2021.3.0/linux/bin
+Found candidate GCC installation: /usr/lib/gcc/i686-redhat-linux/8
+Found candidate GCC installation: /usr/lib/gcc/x86_64-redhat-linux/8
+Selected GCC installation: /usr/lib/gcc/x86_64-redhat-linux/8
+Candidate multilib: .;@m64
+Candidate multilib: 32;@m32
+Selected multilib: .;@m64
+ "/usr/bin/ld" -export-dynamic --eh-frame-hdr -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_162ab /usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/8/crtbegin.o -L/share/apps/intel/compiler/2021.3.0/linux/bin/../compiler/lib/intel64_lin -L/share/apps/intel/compiler/2021.3.0/linux/bin/../lib -L/share/apps/intel/compiler/2021.3.0/linux/bin/../compiler/lib/intel64_lin -L/usr/lib/gcc/x86_64-redhat-linux/8 -L/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/8/../../.. -L/share/apps/intel/compiler/2021.3.0/linux/bin/../lib -L/lib -L/usr/lib -L/share/apps/intel/vpl/2021.4.0/lib -L/share/apps/intel/tbb/2021.3.0/env/../lib/intel64/gcc4.8 -L/share/apps/intel/mpi/2021.3.0//libfabric/lib -L/share/apps/intel/mpi/2021.3.0//lib/release -L/share/apps/intel/mpi/2021.3.0//lib -L/share/apps/intel/mkl/2021.3.0/lib/intel64 -L/share/apps/intel/ippcp/2021.3.0/lib/intel64 -L/share/apps/intel/ipp/2021.3.0/lib/intel64 -L/share/apps/intel/dnnl/2021.3.0/cpu_dpcpp_gpu_dpcpp/lib -L/share/apps/intel/dal/2021.3.0/lib/intel64 -L/share/apps/intel/compiler/2021.3.0/linux/compiler/lib/intel64_lin -L/share/apps/intel/compiler/2021.3.0/linux/lib -L/share/apps/intel/clck/2021.3.0/lib/intel64 -L/share/apps/intel/ccl/2021.3.0/lib/cpu_gpu_dpcpp -L/opt/munge/lib -L/opt/slurm/20.11.5/lib64 -L/opt/slurm/20.11.5/lib CMakeFiles/cmTC_162ab.dir/OpenMPTryFlag.cpp.o -Bstatic -lsvml -Bdynamic -Bstatic -lirng -Bdynamic -lstdc++ -limf -lm -lgcc_s -lgcc -Bstatic -lirc -Bdynamic -ldl -lomp -lgcc_s -lgcc -lpthread -lc -lgcc_s -lgcc -Bstatic -lirc_s -Bdynamic /usr/lib/gcc/x86_64-redhat-linux/8/crtend.o /usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crtn.o
+/usr/bin/ld: cannot find -lomp
+clang++: error: linker command failed with exit code 1 (use -v to see invocation)
+gmake[1]: *** [CMakeFiles/cmTC_162ab.dir/build.make:106: cmTC_162ab] Error 1
+gmake[1]: Leaving directory '/share/apps/QuEST-MV3/ASC_QuEST/random/QuEST/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_162ab/fast] Error 2
+
+
+
